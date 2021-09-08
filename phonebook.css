@@ -1,0 +1,302 @@
+/***********/
+/* General */
+/***********/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.8em;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(200, 200, 200);
+    line-height: 1.8;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 900px;
+}
+header{
+    text-align: center;
+    padding: 1em;
+    font-family: cursive;
+    font-style: italic;
+    font-weight: 1000;
+    
+}
+footer{
+    color: black;
+    text-align: center;
+    padding: 0.5em;
+}
+
+/* class */
+
+.main-container{
+    background-color: whitesmoke;
+    padding: 1em;
+    width: 80%;
+    flex: 1;
+    box-shadow: 3px 3px 3px #aaa;
+    border-radius: 10px;
+}
+.main-nav{/* the navigation bar in the container*/
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    padding: 1em;
+    border-bottom: solid #dddddd 2px;
+}
+
+.main-nav .search-buttons{/* the buttons in the navigation bar*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 20%;
+    min-width: 50px;/*to be responsive*/
+}
+#search-txt{/* the text input in the navigation bar*/
+    background-image: url('image/search.png');
+    background-size: 1em;
+    background-position:center right ;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding: 0.5em;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+#myUL li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+li span{
+    overflow: hidden;
+    padding: 0px 5px ;
+    width: 100%;
+    height: 100%;
+}
+.name{
+    max-width: 100%;
+    min-width: 80px;
+}
+.main-container #myUL{
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+.main-container #myUL li{
+    border-bottom: 2px solid #ddd;
+    background-color: #f6f6f6;
+    padding: 1em;
+}
+.btns{ /*giving max width to keep them stick on the right*/
+    max-width: 70px;
+}
+.edt-btn{
+    padding-left: 10px;
+}
+img:hover{
+    cursor: pointer;
+}
+.btn:hover{
+    cursor: pointer;
+}
+a{
+    color: black;
+    text-decoration: none;/* Remove default text underline */
+    cursor: pointer;
+}
+.main-container  #myUL li:hover{
+    background-color: #eee; 
+}
+
+/*********************/
+/****** Form ******/
+/*********************/
+
+form{
+    
+    display: flex;
+    flex-direction: column;
+}
+form input{
+    border-radius: 5px;
+    border: solid 1px gray;
+    padding: 0 5px;
+    width: 50%;
+    max-width: 200px;
+}
+form textarea{
+    border-radius: 5px;
+    border: solid 1px gray;
+    height: 200px;
+    padding: 5px;
+    overflow: scroll;
+    margin-top: 10px;
+}
+form label{
+    width: 150px;
+    flex-grow: 1;
+    text-shadow: 3px 3px 3px #aaa;
+}
+form .sub-btn{
+    margin: 20px;
+    padding: 5px;
+    width: 100px;
+    align-self: flex-end;
+}
+form span{
+    background-color: rgb(185, 185, 185);
+    padding: 5px;
+    margin: 10px 0;
+    display: flex;
+    align-content: space-around;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #aaa;
+}
+form button{
+    width: 20px;
+    align-self: flex-end;
+}
+/*********************/
+/****** Overlay ******/
+/*********************/
+
+.overlay{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.hidden{
+    opacity: 0;
+    z-index: -1;
+}
+.create-contact{
+    background-color: rgb(200, 209, 211);
+    border-radius: 10px;
+    padding: 20px;
+    width: 40%;
+    max-width: 600px;
+}
+.overlay button:hover{
+    cursor: pointer;
+}
+.active{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/************************/
+/* contact info overlay */
+/************************/
+
+.contact-info{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    
+}
+.contact-info h2{
+    text-align: center;
+    margin: 10px;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+#infoUL{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px;
+    background-color: white;
+    border: gray solid 2px;
+    border-radius: 5px;
+    list-style-type: none; /* Remove default list styling */
+}
+#infoUL li{
+    
+    display: inline-block;
+    overflow: hidden;
+}
+.my-info{
+    
+    background-color: teal;
+    padding: 30px;
+    border-radius: 10px;
+    border:grey 2px solid;
+}
+.contact-info button{
+    float: right;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/**************/
+/** edit box **/
+/**************/
+
+.edit-contact{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.my-editForm{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px;
+    background-color: white;
+    border: gray solid 2px;
+    border-radius: 5px;
+}
+.some-style{/* style on click */
+    border: 10px solid rgb(164, 211, 54);
+    background-color: #db4b93;
+}

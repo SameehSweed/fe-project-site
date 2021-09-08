@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Phone Book</title>
+    <link rel="stylesheet" href="phonebook.css" />
+    <script defer src="phonebook.js"></script>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <header>
+      <h2>Phone Book</h2>
+    </header>
+
+    <main>
+      <div class="main-container">
+        <section class="main-nav">
+          <span class="search-bar"><input type="text" id="search-txt" /></span>
+          <span class="search-buttons">
+            <img src="image/add.png" alt="" id="add" />
+            <img src="image/delete.png" alt="" id="dlt" />
+          </span>
+        </section>
+
+        <section class="main-contacts">
+          <!-- here we display the elements -->
+          <ul id="myUL"></ul>
+        </section>
+      </div>
+
+      <div class="contact-info hidden">
+        <!-- here we display the info of the choosen contact -->
+        <section class="my-info">
+          <button id="close-box" value="close-box" type="reset">&times;</button>
+          <h2 id="infoH2"></h2>
+          <ul id="infoUL"></ul>
+        </section>
+      </div>
+      <div class="edit-contact hidden">
+        <!-- display the form to edit user details -->
+        <section class="my-editForm"></section>
+      </div>
+
+      <div class="overlay hidden">
+        <form class="create-contact hidden">
+          <button class="close-btn" value="close-form" type="reset">
+            &times;
+          </button>
+          <span>
+            <label>First Name *</label>
+            <input
+              type="text"
+              id="input-name"
+              name="firstname"
+              placeholder="Your name.."
+              required
+            />
+          </span>
+          <span>
+            <label>Phone *</label>
+            <input
+              type="text"
+              id="input-tel"
+              name="telephone"
+              placeholder="example: 054-1234567"
+              title="phone-number"
+              required
+            />
+          </span>
+          <span>
+            <label>Address</label>
+            <input type="text" id="input-address" name="address" />
+          </span>
+          <span>
+            <label>Email</label>
+            <input type="email" id="input-email" name="email" />
+          </span>
+          <label>Description</label>
+          <textarea
+            id="input-description"
+            name="description"
+            placeholder="Write something.."
+          ></textarea>
+          <input class="sub-btn" type="submit" value="Submit" />
+        </form>
+      </div>
+      <span
+        ><button id="style-btn" class="">Click me to be creative</button></span
+      >
+      <!-- button for style applie -->
+    </main>
+
+    <footer>
+      <p>Median & Sameeh 2021</p>
+    </footer>
+  </body>
+</html>
